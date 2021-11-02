@@ -1,0 +1,18 @@
+broker: redis://192.168.3.123:6379
+
+default_queue: "machineryDemo"
+
+#定义持久化存在哪里
+result_backend: redis://192.168.3.123:6379
+
+redis:
+  maxidle: 3
+  max_active: 3
+  max_idle_timeout: 240
+  wait: true
+  read_timeout: 15
+  write_timeout: 15
+  connect_timeout: 15
+  normal_task_poll_period: 1000
+  delayed_tasks_poll_period: 500
+  delayed_tasks_key: "machineryDemo"
